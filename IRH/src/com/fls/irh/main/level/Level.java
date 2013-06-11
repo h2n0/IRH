@@ -11,7 +11,6 @@ import com.fls.irh.main.entity.Entity;
 import com.fls.irh.main.entity.Mob;
 import com.fls.irh.main.entity.Player;
 import com.fls.irh.main.entity.Slime;
-import com.fls.irh.main.entity.Zombie;
 import com.fls.irh.main.gfx.Screen;
 import com.fls.irh.main.level.levelgen.LevelGen;
 import com.fls.irh.main.level.tile.Tile;

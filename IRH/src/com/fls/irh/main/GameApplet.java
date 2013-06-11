@@ -3,8 +3,8 @@ package com.fls.irh.main;
 import java.applet.Applet;
 import java.awt.BorderLayout;
 
+@SuppressWarnings("serial")
 public class GameApplet extends Applet {
-	private static final long serialVersionUID = 1L;
 
 	private Game game = new Game();
 

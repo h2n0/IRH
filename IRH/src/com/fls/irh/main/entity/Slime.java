@@ -2,8 +2,6 @@ package com.fls.irh.main.entity;
 
 import com.fls.irh.main.gfx.Colour;
 import com.fls.irh.main.gfx.Screen;
-import com.fls.irh.main.item.ResourceItem;
-import com.fls.irh.main.item.resource.Resource;
 
 public class Slime extends Mob {
 	private int xa, ya;

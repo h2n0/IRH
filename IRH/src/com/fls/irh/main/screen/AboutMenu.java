@@ -1,5 +1,6 @@
 package com.fls.irh.main.screen;
 
+import com.fls.irh.main.Game;
 import com.fls.irh.main.gfx.Colour;
 import com.fls.irh.main.gfx.Font;
 import com.fls.irh.main.gfx.Screen;
@@ -20,13 +21,13 @@ public class AboutMenu extends Menu {
 	public void render(Screen screen) {
 		screen.clear(0);
 
-		Font.draw("About Minicraft", screen, 2 * 8 + 4, 1 * 8, Colour.get(0, 555, 555, 555));
-		Font.draw("Minicraft was made", screen, 0 * 8 + 4, 3 * 8, Colour.get(0, 333, 333, 333));
-		Font.draw("by Markus Persson", screen, 0 * 8 + 4, 4 * 8, Colour.get(0, 333, 333, 333));
-		Font.draw("For the 22'nd ludum", screen, 0 * 8 + 4, 5 * 8, Colour.get(0, 333, 333, 333));
-		Font.draw("dare competition in", screen, 0 * 8 + 4, 6 * 8, Colour.get(0, 333, 333, 333));
-		Font.draw("december 2011.", screen, 0 * 8 + 4, 7 * 8, Colour.get(0, 333, 333, 333));
-		Font.draw("it is dedicated to", screen, 0 * 8 + 4, 9 * 8, Colour.get(0, 333, 333, 333));
-		Font.draw("my father. <3", screen, 0 * 8 + 4, 10 * 8, Colour.get(0, 333, 333, 333));
+		Font.draw("About IRH", screen, 2 * 8 + 4, 1 * 8, Colour.get(0, 555, 555, 555));
+		Font.draw("IRH is being", screen, 0 * 8 + 4, 3 * 8, Colour.get(0, 333, 333, 333));
+		Font.draw("made by", screen, 0 * 8 + 4, 4 * 8, Colour.get(0, 333, 333, 333));
+		Font.draw("Fire leaf studios", screen, 0 * 8 + 4, 5 * 8, Colour.get(0, 333, 333, 333));
+		Font.draw("in under a year", screen, 0 * 8 + 4, 6 * 8, Colour.get(0, 333, 333, 333));
+		Font.draw("as a test game", screen, 0 * 8 + 4, 7 * 8, Colour.get(0, 333, 333, 333));
+		Font.draw("Current version", screen, 0 * 8 + 4, 9 * 8, Colour.get(0, 333, 333, 333));
+		Font.draw(""+Game.version, screen, 0 * 8 + 4, 10 * 8, Colour.get(0, 333, 333, 333));
 	}
 }

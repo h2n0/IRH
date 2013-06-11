@@ -1,11 +1,7 @@
 package com.fls.irh.main.gfx;
 
 public class Screen {
-	/*
-	 * public static final int MAP_WIDTH = 64; // Must be 2^x public static final int MAP_WIDTH_MASK = MAP_WIDTH - 1;
-	 * 
-	 * public int[] tiles = new int[MAP_WIDTH * MAP_WIDTH]; public int[] colors = new int[MAP_WIDTH * MAP_WIDTH]; public int[] databits = new int[MAP_WIDTH * MAP_WIDTH];
-	 */
+	
 	public int xOffset;
 	public int yOffset;
 
@@ -24,17 +20,6 @@ public class Screen {
 
 		pixels = new int[w * h];
 
-		// Random random = new Random();
-
-		/*
-		 * for (int i = 0; i < MAP_WIDTH * MAP_WIDTH; i++) { colors[i] = Color.get(00, 40, 50, 40); tiles[i] = 0;
-		 * 
-		 * if (random.nextInt(40) == 0) { tiles[i] = 32; colors[i] = Color.get(111, 40, 222, 333); databits[i] = random.nextInt(2); } else if (random.nextInt(40) == 0) { tiles[i] = 33; colors[i] = Color.get(20, 40, 30, 550); } else { tiles[i] = random.nextInt(4); databits[i] = random.nextInt(4);
-		 * 
-		 * } }
-		 * 
-		 * Font.setMap("Testing the 0341879123", this, 0, 0, Color.get(0, 555, 555, 555));
-		 */
 	}
 
 	public void clear(int color) {
@@ -42,11 +27,6 @@ public class Screen {
 			pixels[i] = color;
 	}
 
-	/*
-	 * public void renderBackground() { for (int yt = yScroll >> 3; yt <= (yScroll + h) >> 3; yt++) { int yp = yt * 8 - yScroll; for (int xt = xScroll >> 3; xt <= (xScroll + w) >> 3; xt++) { int xp = xt * 8 - xScroll; int ti = (xt & (MAP_WIDTH_MASK)) + (yt & (MAP_WIDTH_MASK)) * MAP_WIDTH; render(xp, yp, tiles[ti], colors[ti], databits[ti]); } }
-	 * 
-	 * for (int i = 0; i < sprites.size(); i++) { Sprite s = sprites.get(i); render(s.x, s.y, s.img, s.col, s.bits); } sprites.clear(); }
-	 */
 
 	public void render(int xp, int yp, int tile, int colors, int bits) {
 		xp -= xOffset;
@@ -104,14 +84,12 @@ public class Screen {
 		if (y0 < 0) y0 = 0;
 		if (x1 > w) x1 = w;
 		if (y1 > h) y1 = h;
-		// System.out.println(x0 + ", " + x1 + " -> " + y0 + ", " + y1);
 		for (int yy = y0; yy < y1; yy++) {
 			int yd = yy - y;
 			yd = yd * yd;
 			for (int xx = x0; xx < x1; xx++) {
 				int xd = xx - x;
 				int dist = xd * xd + yd;
-				// System.out.println(dist);
 				if (dist <= r * r) {
 					int br = 255 - dist * 255 / (r * r);
 					if (pixels[xx + yy * w] < br) pixels[xx + yy * w] = br;

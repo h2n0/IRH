@@ -25,10 +25,8 @@ import com.fls.irh.main.screen.Menu;
 import com.fls.irh.main.screen.TitleMenu;
 import com.fls.irh.main.screen.WonMenu;
 
-public class Game extends Canvas
-        implements Runnable
-{
-    private static final long serialVersionUID = 1L;
+@SuppressWarnings("serial")
+public class Game extends Canvas implements Runnable{
     public static final String NAME = "IRH";
     public static final int HEIGHT = 120;
     public static final int WIDTH = 160;

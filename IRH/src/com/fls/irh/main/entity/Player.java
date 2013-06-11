@@ -10,8 +10,7 @@ import com.fls.irh.main.gfx.Screen;
 import com.fls.irh.main.item.FurnitureItem;
 import com.fls.irh.main.item.Item;
 import com.fls.irh.main.item.PowerGloveItem;
-import com.fls.irh.main.item.ReadingItem;
-import com.fls.irh.main.item.book.Book;
+import com.fls.irh.main.item.useitem.FishingRod;
 import com.fls.irh.main.level.Level;
 import com.fls.irh.main.level.tile.Tile;
 import com.fls.irh.main.screen.InventoryMenu;
@@ -40,7 +39,8 @@ public class Player extends Mob {
 		y = 24;
 		stamina = maxStamina;
 
-		inventory.add(new ReadingItem(Book.tutBook));
+	//	inventory.add(new ReadingItem(Book.tutBook));
+		inventory.add(new FishingRod());
 		inventory.add(new FurnitureItem(new Workbench()));
 		inventory.add(new PowerGloveItem());
 	}
