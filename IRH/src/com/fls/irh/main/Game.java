@@ -26,11 +26,11 @@ import com.fls.irh.main.screen.TitleMenu;
 import com.fls.irh.main.screen.WonMenu;
 
 @SuppressWarnings("serial")
-public class Game extends Canvas implements Runnable{
+public class Game extends Canvas implements Runnable {
     public static final String NAME = "IRH";
     public static final int HEIGHT = 120;
     public static final int WIDTH = 160;
-    public static final String version = "V0.7 A";
+    public static final String version = "0.7A";
     private BufferedImage image = new BufferedImage(160, 120, 1);
     private int[] pixels = ((DataBufferInt) this.image.getRaster().getDataBuffer()).getData();
     private boolean running = false;
